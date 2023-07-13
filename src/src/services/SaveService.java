@@ -26,9 +26,9 @@ public class SaveService implements ActionListener {
 	
 		
 		stokKartDao.saveStokKart(StokKart.builder().stokKodu(mainView.stokKoduField.getText())
-				.stokAdi(mainView.stokAdiField.getText()).stokTipi(mainView.stokTipiField.getSelectedIndex())
-				.birim(Integer.toString(mainView.birimField.getSelectedIndex())).barkod(mainView.barkodField.getText())
-				.kdvTipi(mainView.kdvTipiField.getSelectedIndex()).aciklama(mainView.aciklamaField.getText())
+				.stokAdi(mainView.stokAdiField.getText()).stokTipi((int) mainView.stokTipiField.getSelectedItem())
+				.birim((String) mainView.birimField.getSelectedItem()).barkod(mainView.barkodField.getText())
+				.kdvTipi((double) mainView.kdvTipiField.getSelectedItem()).aciklama(mainView.aciklamaField.getText())
 				.olusturmaTarihi(mainView.olusTarihField.getDate())
 				.aciklama(mainView.aciklamaField.getText())
 				.build()

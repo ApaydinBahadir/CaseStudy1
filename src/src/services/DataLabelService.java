@@ -20,10 +20,10 @@ public class DataLabelService implements MouseListener {
 		arrayListService = new ArrayListService(mainView);
 		mainView.stokKoduField.setText(arrayListService.getStokKartData().get(index).getStokKodu());
 		mainView.stokAdiField.setText(arrayListService.getStokKartData().get(index).getStokAdi());
-		mainView.stokTipiField.setSelectedItem(Integer.toString(arrayListService.getStokKartData().get(index).getStokTipi()));
+		mainView.stokTipiField.setSelectedItem(arrayListService.getStokKartData().get(index).getStokTipi());
 		mainView.birimField.setSelectedItem(arrayListService.getStokKartData().get(index).getBirim());
 		mainView.barkodField.setText(arrayListService.getStokKartData().get(index).getBarkod());
-		mainView.kdvTipiField.setSelectedItem(Double.toString(arrayListService.getStokKartData().get(index).getKdvTipi()));
+		mainView.kdvTipiField.setSelectedItem(arrayListService.getStokKartData().get(index).getKdvTipi());
 		mainView.aciklamaField.setText(arrayListService.getStokKartData().get(index).getAciklama());
 		mainView.olusTarihField.setDate(arrayListService.getStokKartData().get(index).getOlusturmaTarihi());
 	}

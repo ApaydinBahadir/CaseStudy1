@@ -32,4 +32,12 @@ public class ArrayListService {
 		    mainView.model.addRow(rows);
 		}
 	}
+	
+	public void toTableSearch(List<StokKart> data) {
+		mainView.model = (DefaultTableModel) mainView.stokKartTable.getModel();
+		mainView.model.setRowCount(0);
+		for(StokKart stokKart: data) {
+			Object[] rows = {stokKart.getStokKodu(), stokKart.getStokAdi(), stokKart.getStokTipi(), stokKart.getBirim(), stokKart.getBarkod(), stokKart.getKdvTipi(), stokKart.getAciklama(), stokKart.getOlusturmaTarihi()};
+		    mainView.model.addRow(rows);
+		}	}
 }

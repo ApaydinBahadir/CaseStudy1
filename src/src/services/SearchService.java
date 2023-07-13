@@ -38,21 +38,20 @@ public class SearchService implements KeyListener{
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-//		arrayListService = new ArrayListService(mainView);
-//		stokKartDao = new StokKartDaoImpl();
-//		String search = mainView.searchBar.getText();
-//		List<StokKart> list = stokKartDao.searchStokKart(search);
-//		arrayListService.toTableSearch(list);
-//		dataLabelService = new DataLabelService(mainView);
-//		dataLabelService.getItem(list.get(0));
-		
-		
-		// TODO Auto-generated method stub
+		arrayListService = new ArrayListService(mainView);
+		stokKartDao = new StokKartDaoImpl();
 		String search = mainView.searchBar.getText();
-		TableRowSorter<DefaultTableModel> rowsorter= new TableRowSorter<DefaultTableModel>(mainView.model);
-		mainView.stokKartTable.setRowSorter(rowsorter);
-		rowsorter.setRowFilter(RowFilter.regexFilter(search, null));
-		//TODO
+		List<StokKart> list = stokKartDao.searchStokKart(search);
+		arrayListService.toTableSearch(list);
+		dataLabelService = new DataLabelService(mainView);
+		
+		
+//		// TODO Auto-generated method stub
+//		String search = mainView.searchBar.getText();
+//		TableRowSorter<DefaultTableModel> rowsorter= new TableRowSorter<DefaultTableModel>(mainView.model);
+//		mainView.stokKartTable.setRowSorter(rowsorter);
+//		rowsorter.setRowFilter(RowFilter.regexFilter(search));
+//		//TODO
 	}
 
 }
